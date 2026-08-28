@@ -2,6 +2,8 @@
 
 A Full Stack transportation operations platform designed to digitize and centralize workflows that were previously handled through manual records and fragmented processes.
 
+The platform was developed collaboratively by a development team, with my participation as **Full Stack Developer & Project Lead**.
+
 This repository is a **public technical case study**. The production source code, infrastructure configuration, operational data, credentials, and client-specific information remain private.
 
 ---
@@ -27,9 +29,13 @@ Socket.IO       WebSockets      GitHub Actions
 
 ## 👩‍💻 My Role
 
-**Full Stack Developer**
+**Full Stack Developer & Project Lead**
 
-I worked across the application stack, contributing to frontend functionality, backend integration, operational workflows, debugging, deployment-related tasks, and continuous improvement of the platform.
+This platform was developed collaboratively by a multidisciplinary development team.
+
+I participated as a Full Stack Developer while also coordinating the project and the development team. My responsibilities included organizing and following up on development tasks, coordinating frontend, backend and infrastructure work, supporting technical decisions, reviewing progress, and helping ensure the different parts of the platform were correctly integrated.
+
+Alongside the coordination role, I contributed directly to the development and continuous improvement of the application, including frontend functionality, backend integration, operational workflows, debugging, deployment-related tasks, and production-oriented improvements.
 
 The project provided hands-on experience building and maintaining a production-oriented business application with multiple user roles, cloud infrastructure, real-time communication, data persistence, exports, and GPS-based functionality.
 
@@ -267,9 +273,9 @@ This case study is maintained as part of my **software development portfolio**. 
 
 ---
 
-## 👩‍💻 Developer
+## 👩‍💻 Portfolio Owner
 
 **Luisa Vargas**  
-Full Stack Developer | Software Developer
+Full Stack Developer & Project Lead
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Luisa_Vargas-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luisa-vargas-233494200/)
