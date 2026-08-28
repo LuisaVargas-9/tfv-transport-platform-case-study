@@ -132,7 +132,7 @@ Additional backend technologies:
 
 ## 🏗️ System Architecture
 
-![TFV Transport Platform Architecture](./images%3Atfv-architecture.png)
+![TFV Transport Platform Architecture](./images/tfv-architecture.png)
 
 *High-level view of the platform architecture, application services, AWS infrastructure, and CI/CD workflow.*
 
