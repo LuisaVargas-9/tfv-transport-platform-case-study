@@ -1,28 +1,29 @@
-# 🚐 Transportation Management Platform — Case Study
+# 🚐 Transportation Management Platform — Technical Case Study
 
-A Full Stack transportation operations platform designed to digitize and centralize workflows that were previously handled through manual records and fragmented processes.
+A production-oriented Full Stack platform built to digitize transportation records, operational traceability, vehicle workflows, and GPS-based trip tracking.
 
-The platform was developed collaboratively by a development team, with my participation as **Full Stack Developer & Project Lead**.
+The system was developed collaboratively by a multidisciplinary team. I participated as **Full Stack Developer & Project Lead**, contributing directly to development while coordinating the work across frontend, backend, and infrastructure.
 
-This repository is a **public technical case study**. The production source code, infrastructure configuration, operational data, credentials, and client-specific information remain private.
+> This repository is a public technical case study. Production source code, operational data, credentials, client-specific information, and production UI captures remain private.
 
 ---
 
 ## 🚀 Project Overview
 
-The platform supports the digital management of transportation operations through a web application used by different operational and administrative roles.
+The platform replaces manual transportation records with a structured digital workflow used by operational and administrative roles.
 
-The system combines trip management, GPS route tracking, operational records, evidence management, reporting, exports, vehicle-related workflows, and administrative tools in a single platform.
+A central workflow is the digital trip record: a driver registers the trip, identifies the **destination** and the **employee accompanying the trip**, records operational information, and the employee can provide a **signature** as part of the validation process. GPS points are also recorded during active trips to support route traceability.
 
-The application was developed as three private codebases:
+The solution is maintained across three private codebases:
 
 ```text
-Frontend        Backend         Infrastructure
-Vue 3           NestJS          Terraform
-Pinia           Prisma          Ansible
-Tailwind CSS    PostgreSQL      Docker Compose
-Axios           Redis           AWS
-Socket.IO       WebSockets      GitHub Actions
+Frontend                 Backend                  Infrastructure
+Vue 3                    NestJS                   Terraform
+Pinia                    TypeScript               Ansible
+Vue Router               Prisma                   Docker Compose
+Tailwind CSS             PostgreSQL               GitHub Actions
+Axios                     Redis                    AWS
+Socket.IO Client         WebSockets               GHCR
 ```
 
 ---
@@ -31,56 +32,68 @@ Socket.IO       WebSockets      GitHub Actions
 
 **Full Stack Developer & Project Lead**
 
-This platform was developed collaboratively by a multidisciplinary development team.
+My work combined direct technical contribution with project coordination. Responsibilities included:
 
-I participated as a Full Stack Developer while also coordinating the project and the development team. My responsibilities included organizing and following up on development tasks, coordinating frontend, backend and infrastructure work, supporting technical decisions, reviewing progress, and helping ensure the different parts of the platform were correctly integrated.
+- Coordinating frontend, backend, infrastructure, and development tasks
+- Following up on implementation progress and integration between application layers
+- Supporting technical decisions and debugging
+- Contributing to frontend functionality and backend integration
+- Supporting operational workflows, GPS-related functionality, exports, and production improvements
+- Participating in deployment-related work and cloud infrastructure coordination
 
-Alongside the coordination role, I contributed directly to the development and continuous improvement of the application, including frontend functionality, backend integration, operational workflows, debugging, deployment-related tasks, and production-oriented improvements.
-
-The project provided hands-on experience building and maintaining a production-oriented business application with multiple user roles, cloud infrastructure, real-time communication, data persistence, exports, and GPS-based functionality.
+The project was collaborative; the case study does not imply sole authorship of the platform.
 
 ---
 
 ## ✨ Core Capabilities
 
-### 🚐 Transportation Operations
+### Transportation Operations
 
 - Digital trip registration and management
+- Destination and employee association within trip records
+- Employee signature collection as part of trip validation
 - Trip history and operational traceability
-- GPS-based route tracking
-- Route visualization on maps
-- Driver-oriented trip workflows
-- Administrative transportation management
+- Driver-oriented workflows
+- Role-based administrative workflows
 
-### 📍 GPS Tracking
+### GPS Tracking
 
-The application records GPS coordinates during active trips and uses those points to reconstruct and visualize travelled routes.
+- GPS point recording during active trips
+- Route reconstruction and map visualization
+- Synchronization of GPS points during the trip lifecycle
+- Handling of pending GPS points when a trip is finalized
 
-The frontend includes logic for synchronizing GPS points during a trip and handling pending coordinates when a trip is finalized, helping preserve route information even when connectivity or session timing introduces synchronization challenges.
+### Reporting & Exports
 
-### 📊 History, Filters & Exports
-
-Operational history can be reviewed using filters and exported for reporting purposes.
-
-The frontend includes tooling for:
-
+- Filtered trip-history reporting
 - PDF generation
 - Excel exports
-- Filtered trip-history reports
-- Map information in reporting workflows
-- Document preview and download-related workflows
+- Map-related reporting information
+- Document preview and download workflows
 
-### 📎 Evidence Management
+### Evidence & Maintenance
 
-The platform includes an evidence module that allows operational records to be supported with attached files and reviewed through an administrative workflow.
+- Evidence records with attached files
+- Vehicle-related administrative workflows
+- Daily and monthly maintenance records
+- Maintenance checklist functionality
 
-### 🚘 Vehicle & Maintenance Workflows
+### Additional Operational Modules
 
-Administrative modules include vehicle-related information and maintenance-oriented workflows, including checklist and reporting functionality.
+- Service requests
+- Quote requests
+- Vehicle and driver administration
+- Employee and destination management
 
-### 👥 Role-Based Experience
+---
 
-The application exposes different navigation and functionality depending on the authenticated user's role, allowing operational users and administrative users to access workflows relevant to their responsibilities.
+## 🏗️ System Architecture
+
+![Transportation Management Platform Architecture](./images/tfv-architecture.png)
+
+*High-level architecture validated against the private application and infrastructure repositories. Client-specific values and production configuration are intentionally omitted.*
+
+The application uses a Vue frontend and NestJS API. The backend persists relational data in PostgreSQL, uses Redis as an application service, stores files in Amazon S3, and exposes REST and WebSocket-based functionality.
 
 ---
 
@@ -93,32 +106,16 @@ The application exposes different navigation and functionality depending on the 
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)
 
-Additional frontend technologies:
-
-- Axios
-- Socket.IO Client
-- Chart.js
-- ExcelJS
-- jsPDF
-- PDF.js
-- XLSX
+Additional technologies: **Vue Router, Axios, Socket.IO Client, Chart.js, ExcelJS, jsPDF, PDF.js, XLSX**.
 
 ### Backend
 
 ![NestJS](https://img.shields.io/badge/NestJS-11-E0234E?style=flat-square&logo=nestjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=flat-square&logo=prisma&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-7-2D3748?style=flat-square&logo=prisma&logoColor=white)
 
-Additional backend technologies:
-
-- JWT / Passport
-- Redis
-- WebSockets / Socket.IO
-- AWS S3 SDK
-- Swagger / OpenAPI
-- Class Validator
-- Jest
+Additional technologies: **JWT / Passport, Redis, WebSockets / Socket.IO, AWS S3 SDK, Swagger / OpenAPI, Class Validator, NestJS Throttler, Jest**.
 
 ### Cloud & DevOps
 
@@ -130,86 +127,20 @@ Additional backend technologies:
 
 ---
 
-## 🏗️ System Architecture
+## ☁️ Infrastructure & Deployment
 
-![TFV Transport Platform Architecture](./images/tfv-architecture.png)
+The AWS infrastructure is defined with **Terraform** and the EC2 server is provisioned with **Ansible**.
 
-*High-level view of the platform architecture, application services, AWS infrastructure, and CI/CD workflow.*
+Terraform manages the main cloud resources used by the platform:
 
-<details>
-<summary>Text-based architecture overview</summary>
+- VPC, subnets, Internet Gateway, and routing
+- EC2 instances and Elastic IPs
+- RDS PostgreSQL
+- Amazon S3
+- Security Groups
+- IAM
 
-```text
-┌──────────────────────────────┐
-│          Vue 3 + Vite        │
-│   Pinia · Tailwind · Axios   │
-│       Socket.IO Client       │
-└──────────────┬───────────────┘
-               │
-        REST API / WebSockets
-               │
-               ▼
-┌──────────────────────────────┐
-│            NestJS            │
-│ JWT · Prisma · WebSockets    │
-│ Redis · Swagger · AWS SDK    │
-└───────┬────────┬─────────────┘
-        │        │
-        ▼        ▼
- PostgreSQL    Redis
-   (RDS)      Cache / realtime
-        │
-        └──────────────┐
-                       ▼
-                    AWS S3
-                Object storage
-```
-
-</details>
-
----
-
-## ☁️ Infrastructure Architecture
-
-The infrastructure is defined as code and supports separate application environments.
-
-```text
-GitHub
-   │
-   │ GitHub Actions
-   ▼
-GHCR Container Images
-   │
-   ▼
-AWS EC2
-   │
-   ├── Docker Compose
-   │     ├── Frontend
-   │     └── Backend API
-   │
-   ├──────────────► RDS PostgreSQL
-   │
-   └──────────────► Amazon S3
-
-Terraform
-   │
-   ├── VPC / Subnets / Routing
-   ├── EC2 / Elastic IP
-   ├── RDS
-   ├── S3
-   ├── Security Groups
-   └── IAM
-
-Ansible
-   │
-   └── Server provisioning and application deployment
-```
-
-The infrastructure workflow includes **development, test, and production environments**, container images hosted in **GitHub Container Registry (GHCR)**, and automated deployment through **GitHub Actions**.
-
----
-
-## 🔄 Deployment Workflow
+The application services run with **Docker Compose on EC2**. The deployment includes frontend, backend, and Redis containers, while the backend connects to RDS PostgreSQL and Amazon S3.
 
 ```text
 Code Change
@@ -220,62 +151,62 @@ GitHub Repository
     ▼
 GitHub Actions
     │
-    ├── Build application
-    ├── Build Docker image
-    └── Publish image to GHCR
-              │
-              ▼
-          AWS EC2
-              │
-              ▼
-       Docker Compose
+    ▼
+Build & Publish Docker Image
+    │
+    ▼
+GitHub Container Registry (GHCR)
+    │
+    ▼
+AWS EC2
+    │
+    ▼
+Docker Compose
+    ├── Vue Frontend
+    ├── NestJS Backend
+    └── Redis
+
+Backend ─────► RDS PostgreSQL
+Backend ─────► Amazon S3
 ```
 
-Terraform manages the AWS resources while Ansible handles server provisioning and application configuration.
+### Environments
+
+The infrastructure and deployment workflow support separate **production**, **development**, and **test** environments.
 
 ---
 
 ## 🧪 Testing & Quality
 
-The NestJS backend includes Jest-based testing infrastructure with support for unit testing, coverage reports, debugging, and end-to-end test configuration.
+The NestJS backend includes Jest-based testing infrastructure with scripts for unit tests, watch mode, coverage, debugging, and end-to-end test configuration.
 
-The project also involved iterative debugging and production-oriented improvements related to authentication, GPS synchronization, reporting, exports, responsive user interfaces, and operational workflows.
+The project also involved iterative production-oriented improvements around authentication, GPS synchronization, reporting, exports, operational workflows, and deployment reliability.
 
 ---
 
 ## 🔐 Product Scope & Confidentiality
 
-This case study intentionally focuses on the platform's **technical architecture, engineering scope, development responsibilities, and technology stack** rather than reproducing the production user interface.
+This case study intentionally documents the **engineering scope and architecture** without publishing sensitive production details.
 
-Because the application operates with real transportation workflows and operational information, production screenshots are not included publicly. This avoids exposing interface details that may contain or reveal internal processes, user information, vehicle data, signatures, locations, routes, or other operational context.
+The following remain private:
 
-The architecture diagram and technical documentation in this repository are therefore designed to communicate the engineering complexity of the solution while preserving the confidentiality of the production system.
-
----
-
-## 🔒 Confidentiality
-
-This repository intentionally **does not contain the production source code or production interface captures**.
-
-The following information remains private:
-
-- Application source repositories
+- Production source repositories
 - Production UI screenshots and internal workflows
 - Customer and organization information
-- User and employee data
-- Signatures and operational validation records
+- Employee and user data
+- Signatures and validation records
 - Vehicle identifiers and operational records
-- Addresses, GPS routes, and route-specific business data
+- Addresses and GPS route data
 - Credentials and environment secrets
 - Terraform state and production infrastructure values
 
-The purpose of this repository is exclusively to document the **technical architecture, engineering decisions, technologies, and development experience** behind the platform without exposing confidential implementation or operational information.
+The architecture diagram is therefore a high-level representation rather than a reproduction of production configuration.
 
 ---
 
 ## 📌 Repository Status
 
-This case study is maintained as part of my **software development portfolio** and intentionally presents a high-level technical view of the production platform.
+Maintained as part of my software development portfolio.
 
 ---
 
