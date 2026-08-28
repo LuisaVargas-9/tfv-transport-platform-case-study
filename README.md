@@ -132,6 +132,13 @@ Additional backend technologies:
 
 ## 🏗️ System Architecture
 
+![TFV Transport Platform Architecture](./images%3Atfv-architecture.png)
+
+*High-level view of the platform architecture, application services, AWS infrastructure, and CI/CD workflow.*
+
+<details>
+<summary>Text-based architecture overview</summary>
+
 ```text
 ┌──────────────────────────────┐
 │          Vue 3 + Vite        │
@@ -157,6 +164,8 @@ Additional backend technologies:
                     AWS S3
                 Object storage
 ```
+
+</details>
 
 ---
 
