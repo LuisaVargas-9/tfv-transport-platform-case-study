@@ -243,42 +243,39 @@ The project also involved iterative debugging and production-oriented improvemen
 
 ---
 
-## 📸 Product Screenshots
+## 🔐 Product Scope & Confidentiality
 
-Screenshots and visual documentation will be added to this case study using **anonymized or recreated data only**.
+This case study intentionally focuses on the platform's **technical architecture, engineering scope, development responsibilities, and technology stack** rather than reproducing the production user interface.
 
-Planned examples include:
+Because the application operates with real transportation workflows and operational information, production screenshots are not included publicly. This avoids exposing interface details that may contain or reveal internal processes, user information, vehicle data, signatures, locations, routes, or other operational context.
 
-- Administrative dashboard
-- Trip history
-- GPS route visualization
-- Operational trip workflow
-- Evidence management
-- Reporting and exports
+The architecture diagram and technical documentation in this repository are therefore designed to communicate the engineering complexity of the solution while preserving the confidentiality of the production system.
 
 ---
 
 ## 🔒 Confidentiality
 
-This repository intentionally **does not contain the production source code**.
+This repository intentionally **does not contain the production source code or production interface captures**.
 
 The following information remains private:
 
 - Application source repositories
+- Production UI screenshots and internal workflows
 - Customer and organization information
 - User and employee data
+- Signatures and operational validation records
 - Vehicle identifiers and operational records
-- Addresses and route-specific business data
+- Addresses, GPS routes, and route-specific business data
 - Credentials and environment secrets
 - Terraform state and production infrastructure values
 
-The purpose of this repository is exclusively to document the **technical architecture, engineering decisions, technologies, and development experience** behind the platform.
+The purpose of this repository is exclusively to document the **technical architecture, engineering decisions, technologies, and development experience** behind the platform without exposing confidential implementation or operational information.
 
 ---
 
 ## 📌 Repository Status
 
-This case study is maintained as part of my **software development portfolio**. Additional architecture documentation and anonymized product visuals may be added over time.
+This case study is maintained as part of my **software development portfolio** and intentionally presents a high-level technical view of the production platform.
 
 ---
 
